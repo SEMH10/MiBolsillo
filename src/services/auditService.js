@@ -1,0 +1,2 @@
+import {getDb,newId,now} from '../data/database';
+export async function logAudit({familyId,userId,entity,entityId,action,before=null,after=null}){const db=await getDb();await db.runAsync('INSERT INTO audit_log(id,family_id,user_id,entidad,entidad_id,accion,datos_previos,datos_nuevos,fecha) VALUES(?,?,?,?,?,?,?,?,?)',[newId('audit'),familyId,userId,entity,entityId,action, before?JSON.stringify(before):null,after?JSON.stringify(after):null,now()]);}

@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "MiBolsillo",
+    "slug": "mibolsillo",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#E0F2F1"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MiBolsillo necesita acceso a tus fotos para adjuntar comprobantes.",
+          "cameraPermission": "MiBolsillo necesita acceso a la cámara para fotografiar comprobantes."
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.mibolsillo.app",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mibolsillo.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "12075011-c5bc-4c09-a159-0373dea71fa3"
+      }
+    }
+  }
+}
